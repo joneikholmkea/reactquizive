@@ -1,0 +1,424 @@
+{
+    "questions": [
+      {
+        "topic": "React Component",
+        "questions": [
+          {
+            "question": "Hvad er den korrekte syntaks for at definere en funktionel React komponent?",
+            "options": [
+              "function MinKomponent() { return <View></View>; }",
+              "class MinKomponent { render() { return <View></View>; } }",
+              "const MinKomponent = function() => { return <View></View>; }",
+              "MinKomponent = () => <View></View>"
+            ],
+            "correctAnswer": 0
+          },
+          {
+            "question": "Hvilken af følgende er IKKE en gyldig React Native core komponent?",
+            "options": [
+              "Text",
+              "View",
+              "Div",
+              "Image"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvad er den korrekte livscyklus for en React komponent?",
+            "options": [
+              "Rendering → Opdatering → Mounting → Unmounting",
+              "Mounting → Rendering → Opdatering → Unmounting",
+              "Mounting → Opdatering → Unmounting",
+              "Mounting → Rendering → Unmounting"
+            ],
+            "correctAnswer": 2
+          }
+        ]
+      },
+      {
+        "topic": "Custom Component",
+        "questions": [
+          {
+            "question": "Hvordan importeres en custom komponent fra en anden fil?",
+            "options": [
+              "import { MinKomponent } from './MinKomponent';",
+              "require('./MinKomponent');",
+              "import MinKomponent from './MinKomponent';",
+              "import('./MinKomponent.js');"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvad er den bedste praksis for at navngive custom komponenter i React Native?",
+            "options": [
+              "minKomponent",
+              "MinKomponent",
+              "min_komponent",
+              "min-komponent"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvordan kan en custom komponent genbruges flere steder i en applikation?",
+            "options": [
+              "Ved at kopiere koden hver gang komponenten skal bruges",
+              "Ved at definere komponenten i App.js",
+              "Ved at eksportere komponenten og importere den hvor den skal bruges",
+              "Ved at bruge global state til at gemme komponenten"
+            ],
+            "correctAnswer": 2
+          }
+        ]
+      },
+      {
+        "topic": "Buttons",
+        "questions": [
+          {
+            "question": "Hvad er den korrekte måde at definere en knap i React Native?",
+            "options": [
+              "<button onPress={() => console.log('Trykket')}>Tryk her</button>",
+              "<Button title=\"Tryk her\" onPress={() => console.log('Trykket')} />",
+              "<Touchable>Tryk her</Touchable>",
+              "<Press>Tryk her</Press>"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvilken komponent bruges oftest til at skabe en tilpasset knap med mere fleksibilitet?",
+            "options": [
+              "Button",
+              "TouchableOpacity",
+              "Pressable",
+              "Både TouchableOpacity og Pressable er korrekte"
+            ],
+            "correctAnswer": 3
+          },
+          {
+            "question": "Hvordan tilføjer man en funktion, der skal køre, når en knap trykkes?",
+            "options": [
+              "onClick={() => minFunktion()}",
+              "onTouch={() => minFunktion()}",
+              "onPress={() => minFunktion()}",
+              "onPush={() => minFunktion()}"
+            ],
+            "correctAnswer": 2
+          }
+        ]
+      },
+      {
+        "topic": "Style",
+        "questions": [
+          {
+            "question": "Hvad er den korrekte måde at tilføje styling til en React Native komponent?",
+            "options": [
+              "<View style=\"background-color: red;\"></View>",
+              "<View style={{backgroundColor: 'red'}}></View>",
+              "<View css={{backgroundColor: 'red'}}></View>",
+              "<View className=\"red-background\"></View>"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvordan defineres en stylesheet i React Native?",
+            "options": [
+              "const styles = StyleSheet.make({ ... });",
+              "const styles = StyleSheet.create({ ... });",
+              "const styles = new StyleSheet({ ... });",
+              "const styles = { ... };"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvilken af følgende er IKKE en gyldig måde at angive farver på i React Native styling?",
+            "options": [
+              "'red'",
+              "'#FF0000'",
+              "'rgb(255, 0, 0)'",
+              "'background-color: red'"
+            ],
+            "correctAnswer": 3
+          }
+        ]
+      },
+      {
+        "topic": "Flexbox",
+        "questions": [
+          {
+            "question": "Hvad er standardværdien for 'flexDirection' i React Native?",
+            "options": [
+              "row",
+              "column",
+              "row-reverse",
+              "column-reverse"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvilken flexbox egenskab bruges til at justere elementer langs hovedaksen?",
+            "options": [
+              "alignItems",
+              "justifyContent",
+              "alignContent",
+              "justifyItems"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvordan får man et element til at fylde al tilgængelig plads i en container med flexbox?",
+            "options": [
+              "flex: 'full'",
+              "flex: 'grow'",
+              "flex: 1",
+              "flexGrow: true"
+            ],
+            "correctAnswer": 2
+          }
+        ]
+      },
+      {
+        "topic": "Eventhandling",
+        "questions": [
+          {
+            "question": "Hvilken prop bruges til at håndtere tryk-events på en Button komponent?",
+            "options": [
+              "onClick",
+              "onTouch",
+              "onPress",
+              "onTap"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvordan håndteres en scroll-event i en ScrollView?",
+            "options": [
+              "<ScrollView onScroll={handleScroll}>...</ScrollView>",
+              "<ScrollView scrollEvent={handleScroll}>...</ScrollView>",
+              "<ScrollView whenScrolled={handleScroll}>...</ScrollView>",
+              "<ScrollView scroll={handleScroll}>...</ScrollView>"
+            ],
+            "correctAnswer": 0
+          },
+          {
+            "question": "Hvordan kan man forhindre default behavior for en event i React Native?",
+            "options": [
+              "return false;",
+              "event.preventDefault();",
+              "event.stopPropagation();",
+              "React Native håndterer automatisk events uden default behavior"
+            ],
+            "correctAnswer": 3
+          }
+        ]
+      },
+      {
+        "topic": "Props",
+        "questions": [
+          {
+            "question": "Hvad er props i React Native?",
+            "options": [
+              "Interne tilstande i en komponent",
+              "Parametre der sendes fra en forældrekomponent til en børnekomponent",
+              "Globale variabler der kan tilgås fra alle komponenter",
+              "CSS stilarter for komponenter"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvordan tilgås props i en funktionel komponent?",
+            "options": [
+              "this.props.propName",
+              "props.propName",
+              "this.state.propName",
+              "useState(propName)"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvad er korrekt om props i React Native?",
+            "options": [
+              "Props kan ændres inde i den komponent, der modtager dem",
+              "Props kan kun være strings eller tal",
+              "Props kan ikke indeholde funktioner",
+              "Props er read-only og bør ikke ændres af modtagerkomponenten"
+            ],
+            "correctAnswer": 3
+          }
+        ]
+      },
+      {
+        "topic": "TextInput",
+        "questions": [
+          {
+            "question": "Hvordan hentes værdien fra et TextInput i React Native?",
+            "options": [
+              "Ved at bruge ref til at få adgang til input elementet",
+              "Ved at bruge onChangeText prop og gemme værdien i state",
+              "Ved at bruge getValue() metoden",
+              "Ved at tilgå TextInput.value direkte"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvordan sættes en placeholder tekst i et TextInput?",
+            "options": [
+              "<TextInput default=\"Indtast tekst\" />",
+              "<TextInput hint=\"Indtast tekst\" />",
+              "<TextInput placeholder=\"Indtast tekst\" />",
+              "<TextInput text=\"Indtast tekst\" />"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvordan kan man ændre tastaturtypen for et TextInput?",
+            "options": [
+              "<TextInput inputMode=\"numeric\" />",
+              "<TextInput type=\"numeric\" />",
+              "<TextInput keyboardType=\"numeric\" />",
+              "<TextInput keyboard=\"numeric\" />"
+            ],
+            "correctAnswer": 2
+          }
+        ]
+      },
+      {
+        "topic": "useState",
+        "questions": [
+          {
+            "question": "Hvad returnerer useState hook?",
+            "options": [
+              "Kun statens værdi",
+              "Kun en funktion til at opdatere staten",
+              "Et array med statens værdi og en funktion til at opdatere den",
+              "Et objekt med properties for værdi og opdateringsfunktion"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvad er den korrekte måde at opdatere state baseret på dens forrige værdi?",
+            "options": [
+              "setState(state + 1)",
+              "setState(state => state + 1)",
+              "setState({ ...state, value: state.value + 1 })",
+              "setState(prevState => ({ ...prevState, value: prevState.value + 1 }))"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvordan initialiserer man useState med en kompleks beregning?",
+            "options": [
+              "useState(complexCalculation())",
+              "useState(() => complexCalculation())",
+              "useState({ initialValue: complexCalculation() })",
+              "useState(useCallback(complexCalculation))"
+            ],
+            "correctAnswer": 1
+          }
+        ]
+      },
+      {
+        "topic": "useEffect",
+        "questions": [
+          {
+            "question": "Hvad er formålet med useEffect hook?",
+            "options": [
+              "At opdatere komponentens state",
+              "At optimere rendering af komponenten",
+              "At udføre side-effects i funktionelle komponenter",
+              "At erstatte Redux state management"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvornår køres en useEffect med et tomt dependency array?",
+            "options": [
+              "Ved hver rendering af komponenten",
+              "Kun ved første rendering (mounting)",
+              "Aldrig",
+              "Kun når komponenten unmountes"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvordan returneres en cleanup funktion fra useEffect?",
+            "options": [
+              "useEffect(effect, cleanup, deps)",
+              "useEffect(effect, deps).cleanup(() => {})",
+              "useEffect(effect, deps, () => {})",
+              "useEffect(() => { /* effect */ return () => { /* cleanup */ }; }, deps)"
+            ],
+            "correctAnswer": 3
+          }
+        ]
+      },
+      {
+        "topic": "FlatList",
+        "questions": [
+          {
+            "question": "Hvad er den vigtigste fordel ved at bruge FlatList frem for at mappe over et array?",
+            "options": [
+              "FlatList er hurtigere at skrive",
+              "FlatList har flere indbyggede styling muligheder",
+              "FlatList renderer kun de elementer, der er synlige på skærmen",
+              "FlatList understøtter automatisk pagination"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvilken prop er PÅKRÆVET for en FlatList?",
+            "options": [
+              "style",
+              "data",
+              "itemSeparator",
+              "keyExtractor"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvordan implementerer man en custom separator mellem elementer i en FlatList?",
+            "options": [
+              "separatorStyle prop",
+              "ItemSeparatorComponent prop",
+              "divider prop",
+              "separator prop"
+            ],
+            "correctAnswer": 1
+          }
+        ]
+      },
+      {
+        "topic": "Stack Navigation",
+        "questions": [
+          {
+            "question": "Hvilken pakke bruges typisk til at implementere stack navigation i React Native?",
+            "options": [
+              "react-navigation",
+              "@react-navigation/stack",
+              "react-native-navigation",
+              "react-native-router"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvordan navigerer man til en anden skærm med stack navigation?",
+            "options": [
+              "navigation.go('ScreenName')",
+              "navigation.push('ScreenName')",
+              "navigation.navigate('ScreenName')",
+              "navigation.screen('ScreenName')"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvordan går man tilbage til forrige skærm i stack navigation?",
+            "options": [
+              "navigation.goBack()",
+              "navigation.back()",
+              "navigation.return()",
+              "navigation.pop()"
+            ],
+            "correctAnswer": 0
+          }
+        ]
+      }
+    ]
+  }
