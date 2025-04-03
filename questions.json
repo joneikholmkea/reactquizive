@@ -1,0 +1,950 @@
+{
+    "questions": [
+      {
+        "topic": "React Component",
+        "questions": [
+          {
+            "question": "Hvad er den korrekte syntaks for at definere en funktionel React komponent?",
+            "options": [
+              "function MinKomponent() { return <View></View>; }",
+              "class MinKomponent { render() { return <View></View>; } }",
+              "const MinKomponent = function() => { return <View></View>; }",
+              "MinKomponent = () => <View></View>"
+            ],
+            "correctAnswer": 0
+          },
+          {
+            "question": "Hvilken af følgende er IKKE en gyldig React Native core komponent?",
+            "options": [
+              "Text",
+              "View",
+              "Div",
+              "Image"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvad er den korrekte livscyklus for en React komponent?",
+            "options": [
+              "Rendering → Opdatering → Mounting → Unmounting",
+              "Mounting → Rendering → Opdatering → Unmounting",
+              "Mounting → Opdatering → Unmounting",
+              "Mounting → Rendering → Unmounting"
+            ],
+            "correctAnswer": 2
+          }
+        ]
+      },
+      {
+        "topic": "Custom Component",
+        "questions": [
+          {
+            "question": "Hvordan importeres en custom komponent fra en anden fil?",
+            "options": [
+              "import { MinKomponent } from './MinKomponent';",
+              "require('./MinKomponent');",
+              "import MinKomponent from './MinKomponent';",
+              "import('./MinKomponent.js');"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvad er den bedste praksis for at navngive custom komponenter i React Native?",
+            "options": [
+              "minKomponent",
+              "MinKomponent",
+              "min_komponent",
+              "min-komponent"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvordan kan en custom komponent genbruges flere steder i en applikation?",
+            "options": [
+              "Ved at kopiere koden hver gang komponenten skal bruges",
+              "Ved at definere komponenten i App.js",
+              "Ved at eksportere komponenten og importere den hvor den skal bruges",
+              "Ved at bruge global state til at gemme komponenten"
+            ],
+            "correctAnswer": 2
+          }
+        ]
+      },
+      {
+        "topic": "Buttons",
+        "questions": [
+          {
+            "question": "Hvad er den korrekte måde at definere en knap i React Native?",
+            "options": [
+              "<button onPress={() => console.log('Trykket')}>Tryk her</button>",
+              "<Button title=\"Tryk her\" onPress={() => console.log('Trykket')} />",
+              "<Touchable>Tryk her</Touchable>",
+              "<Press>Tryk her</Press>"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvilken komponent bruges oftest til at skabe en tilpasset knap med mere fleksibilitet?",
+            "options": [
+              "Button",
+              "TouchableOpacity",
+              "Pressable",
+              "Både TouchableOpacity og Pressable er korrekte"
+            ],
+            "correctAnswer": 3
+          },
+          {
+            "question": "Hvordan tilføjer man en funktion, der skal køre, når en knap trykkes?",
+            "options": [
+              "onClick={() => minFunktion()}",
+              "onTouch={() => minFunktion()}",
+              "onPress={() => minFunktion()}",
+              "onPush={() => minFunktion()}"
+            ],
+            "correctAnswer": 2
+          }
+        ]
+      },
+      {
+        "topic": "Style",
+        "questions": [
+          {
+            "question": "Hvad er den korrekte måde at tilføje styling til en React Native komponent?",
+            "options": [
+              "<View style=\"background-color: red;\"></View>",
+              "<View style={{backgroundColor: 'red'}}></View>",
+              "<View css={{backgroundColor: 'red'}}></View>",
+              "<View className=\"red-background\"></View>"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvordan defineres en stylesheet i React Native?",
+            "options": [
+              "const styles = StyleSheet.make({ ... });",
+              "const styles = StyleSheet.create({ ... });",
+              "const styles = new StyleSheet({ ... });",
+              "const styles = { ... };"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvilken af følgende er IKKE en gyldig måde at angive farver på i React Native styling?",
+            "options": [
+              "'red'",
+              "'#FF0000'",
+              "'rgb(255, 0, 0)'",
+              "'background-color: red'"
+            ],
+            "correctAnswer": 3
+          }
+        ]
+      },
+      {
+        "topic": "Flexbox",
+        "questions": [
+          {
+            "question": "Hvad er standardværdien for 'flexDirection' i React Native?",
+            "options": [
+              "row",
+              "column",
+              "row-reverse",
+              "column-reverse"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvilken flexbox egenskab bruges til at justere elementer langs hovedaksen?",
+            "options": [
+              "alignItems",
+              "justifyContent",
+              "alignContent",
+              "justifyItems"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvordan får man et element til at fylde al tilgængelig plads i en container med flexbox?",
+            "options": [
+              "flex: 'full'",
+              "flex: 'grow'",
+              "flex: 1",
+              "flexGrow: true"
+            ],
+            "correctAnswer": 2
+          }
+        ]
+      },
+      {
+        "topic": "Eventhandling",
+        "questions": [
+          {
+            "question": "Hvilken prop bruges til at håndtere tryk-events på en Button komponent?",
+            "options": [
+              "onClick",
+              "onTouch",
+              "onPress",
+              "onTap"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvordan håndteres en scroll-event i en ScrollView?",
+            "options": [
+              "<ScrollView onScroll={handleScroll}>...</ScrollView>",
+              "<ScrollView scrollEvent={handleScroll}>...</ScrollView>",
+              "<ScrollView whenScrolled={handleScroll}>...</ScrollView>",
+              "<ScrollView scroll={handleScroll}>...</ScrollView>"
+            ],
+            "correctAnswer": 0
+          },
+          {
+            "question": "Hvordan kan man forhindre default behavior for en event i React Native?",
+            "options": [
+              "return false;",
+              "event.preventDefault();",
+              "event.stopPropagation();",
+              "React Native håndterer automatisk events uden default behavior"
+            ],
+            "correctAnswer": 3
+          }
+        ]
+      },
+      {
+        "topic": "Props",
+        "questions": [
+          {
+            "question": "Hvad er props i React Native?",
+            "options": [
+              "Interne tilstande i en komponent",
+              "Parametre der sendes fra en forældrekomponent til en børnekomponent",
+              "Globale variabler der kan tilgås fra alle komponenter",
+              "CSS stilarter for komponenter"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvordan tilgås props i en funktionel komponent?",
+            "options": [
+              "this.props.propName",
+              "props.propName",
+              "this.state.propName",
+              "useState(propName)"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvad er korrekt om props i React Native?",
+            "options": [
+              "Props kan ændres inde i den komponent, der modtager dem",
+              "Props kan kun være strings eller tal",
+              "Props kan ikke indeholde funktioner",
+              "Props er read-only og bør ikke ændres af modtagerkomponenten"
+            ],
+            "correctAnswer": 3
+          }
+        ]
+      },
+      {
+        "topic": "TextInput",
+        "questions": [
+          {
+            "question": "Hvordan hentes værdien fra et TextInput i React Native?",
+            "options": [
+              "Ved at bruge ref til at få adgang til input elementet",
+              "Ved at bruge onChangeText prop og gemme værdien i state",
+              "Ved at bruge getValue() metoden",
+              "Ved at tilgå TextInput.value direkte"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvordan sættes en placeholder tekst i et TextInput?",
+            "options": [
+              "<TextInput default=\"Indtast tekst\" />",
+              "<TextInput hint=\"Indtast tekst\" />",
+              "<TextInput placeholder=\"Indtast tekst\" />",
+              "<TextInput text=\"Indtast tekst\" />"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvordan kan man ændre tastaturtypen for et TextInput?",
+            "options": [
+              "<TextInput inputMode=\"numeric\" />",
+              "<TextInput type=\"numeric\" />",
+              "<TextInput keyboardType=\"numeric\" />",
+              "<TextInput keyboard=\"numeric\" />"
+            ],
+            "correctAnswer": 2
+          }
+        ]
+      },
+      {
+        "topic": "useState",
+        "questions": [
+          {
+            "question": "Hvad returnerer useState hook?",
+            "options": [
+              "Kun statens værdi",
+              "Kun en funktion til at opdatere staten",
+              "Et array med statens værdi og en funktion til at opdatere den",
+              "Et objekt med properties for værdi og opdateringsfunktion"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvad er den korrekte måde at opdatere state baseret på dens forrige værdi?",
+            "options": [
+              "setState(state + 1)",
+              "setState(state => state + 1)",
+              "setState({ ...state, value: state.value + 1 })",
+              "setState(prevState => ({ ...prevState, value: prevState.value + 1 }))"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvordan initialiserer man useState med en kompleks beregning?",
+            "options": [
+              "useState(complexCalculation())",
+              "useState(() => complexCalculation())",
+              "useState({ initialValue: complexCalculation() })",
+              "useState(useCallback(complexCalculation))"
+            ],
+            "correctAnswer": 1
+          }
+        ]
+      },
+      {
+        "topic": "useEffect",
+        "questions": [
+          {
+            "question": "Hvad er formålet med useEffect hook?",
+            "options": [
+              "At opdatere komponentens state",
+              "At optimere rendering af komponenten",
+              "At udføre side-effects i funktionelle komponenter",
+              "At erstatte Redux state management"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvornår køres en useEffect med et tomt dependency array?",
+            "options": [
+              "Ved hver rendering af komponenten",
+              "Kun ved første rendering (mounting)",
+              "Aldrig",
+              "Kun når komponenten unmountes"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvordan returneres en cleanup funktion fra useEffect?",
+            "options": [
+              "useEffect(effect, cleanup, deps)",
+              "useEffect(effect, deps).cleanup(() => {})",
+              "useEffect(effect, deps, () => {})",
+              "useEffect(() => { /* effect */ return () => { /* cleanup */ }; }, deps)"
+            ],
+            "correctAnswer": 3
+          }
+        ]
+      },
+      {
+        "topic": "FlatList",
+        "questions": [
+          {
+            "question": "Hvad er den vigtigste fordel ved at bruge FlatList frem for at mappe over et array?",
+            "options": [
+              "FlatList er hurtigere at skrive",
+              "FlatList har flere indbyggede styling muligheder",
+              "FlatList renderer kun de elementer, der er synlige på skærmen",
+              "FlatList understøtter automatisk pagination"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvilken prop er PÅKRÆVET for en FlatList?",
+            "options": [
+              "style",
+              "data",
+              "itemSeparator",
+              "keyExtractor"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvordan implementerer man en custom separator mellem elementer i en FlatList?",
+            "options": [
+              "separatorStyle prop",
+              "ItemSeparatorComponent prop",
+              "divider prop",
+              "separator prop"
+            ],
+            "correctAnswer": 1
+          }
+        ]
+      },
+      {
+        "topic": "Stack Navigation",
+        "questions": [
+          {
+            "question": "Hvilken pakke bruges typisk til at implementere stack navigation i React Native?",
+            "options": [
+              "react-navigation",
+              "@react-navigation/stack",
+              "react-native-navigation",
+              "react-native-router"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvordan navigerer man til en anden skærm med stack navigation?",
+            "options": [
+              "navigation.go('ScreenName')",
+              "navigation.push('ScreenName')",
+              "navigation.navigate('ScreenName')",
+              "navigation.screen('ScreenName')"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvordan går man tilbage til forrige skærm i stack navigation?",
+            "options": [
+              "navigation.goBack()",
+              "navigation.back()",
+              "navigation.return()",
+              "navigation.pop()"
+            ],
+            "correctAnswer": 0
+          }
+        ]
+      },
+      {
+        "topic": "Modal",
+        "questions": [
+          {
+            "question": "Hvad er den korrekte måde at åbne en Modal komponent i React Native?",
+            "options": [
+              "Ved at sætte 'display' prop til 'flex'",
+              "Ved at sætte 'visible' prop til true",
+              "Ved at kalde modalRef.current.open()",
+              "Ved at bruge Navigation.navigate('ModalScreen')"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvilken prop er nødvendig for at lukke en Modal, når brugeren trykker på Android's tilbage-knap?",
+            "options": [
+              "onBackButtonPress",
+              "onRequestClose",
+              "onBackPress",
+              "closeOnBack"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvilken animationstype er IKKE tilgængelig som standard for Modal i React Native?",
+            "options": [
+              "slide",
+              "fade",
+              "none",
+              "bounce"
+            ],
+            "correctAnswer": 3
+          }
+        ]
+      },
+      {
+        "topic": "Context",
+        "questions": [
+          {
+            "question": "Hvad er hovedformålet med React Context API?",
+            "options": [
+              "At optimere rendering af komponenter",
+              "At dele data mellem komponenter uden prop drilling",
+              "At implementere serversiderendering",
+              "At håndtere netværksanmodninger"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvilken hook bruges til at forbruge værdier fra en Context i et funktionelt komponent?",
+            "options": [
+              "useContext",
+              "useContextValue",
+              "withContext",
+              "getContext"
+            ],
+            "correctAnswer": 0
+          },
+          {
+            "question": "Hvornår bør man overveje at bruge Context i stedet for props?",
+            "options": [
+              "Når data kun skal passeres til ét barn-komponent",
+              "Når data skal opdateres ofte",
+              "Når data skal deles med mange komponenter på forskellige niveauer",
+              "Når data kommer fra en ekstern API"
+            ],
+            "correctAnswer": 2
+          }
+        ]
+      },
+      {
+        "topic": "Photos",
+        "questions": [
+          {
+            "question": "Hvilket bibliotek bruges ofte til at vælge billeder fra enhedens galleri i React Native?",
+            "options": [
+              "react-native-photos",
+              "react-native-image-picker",
+              "expo-media-library",
+              "react-native-gallery"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvilken tilladelse skal anmodes om for at få adgang til brugerens fotogalleri på iOS?",
+            "options": [
+              "CAMERA_ROLL",
+              "PHOTOS",
+              "MEDIA_LIBRARY",
+              "GALLERY_ACCESS"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvilket komponent bruges typisk til at vise billeder i React Native?",
+            "options": [
+              "Picture",
+              "ImageView",
+              "Photo",
+              "Image"
+            ],
+            "correctAnswer": 3
+          }
+        ]
+      },
+      {
+        "topic": "Camera",
+        "questions": [
+          {
+            "question": "Hvilket Expo-bibliotek bruges til at få adgang til enhedens kamera?",
+            "options": [
+              "expo-photo",
+              "expo-camera",
+              "expo-image-capture",
+              "expo-media"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvilken tilladelse er nødvendig for at bruge kameraet i en React Native app?",
+            "options": [
+              "RECORD_AUDIO",
+              "ACCESS_CAMERA",
+              "CAMERA",
+              "USE_CAMERA"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvordan gemmer man et billede taget med kameraet til enhedens filsystem?",
+            "options": [
+              "Ved at bruge FileSystem.saveAsync()",
+              "Ved at bruge Camera.saveToCameraRoll()",
+              "Ved at bruge MediaLibrary.saveToLibraryAsync()",
+              "Ved at bruge AsyncStorage.setItem()"
+            ],
+            "correctAnswer": 2
+          }
+        ]
+      },
+      {
+        "topic": "API request",
+        "questions": [
+          {
+            "question": "Hvilken metode bruges oftest til at hente data fra en API i React Native?",
+            "options": [
+              "XMLHttpRequest",
+              "axios.get()",
+              "fetch()",
+              "API.request()"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvordan håndteres asynkrone API-kald bedst i en funktionel komponent?",
+            "options": [
+              "Med Promise.then()",
+              "Med async/await og useEffect",
+              "Med eventListeners",
+              "Med Redux-middleware"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvilken HTTP-metode bruges typisk til at oprette en ny ressource på serveren?",
+            "options": [
+              "GET",
+              "POST",
+              "PUT",
+              "DELETE"
+            ],
+            "correctAnswer": 1
+          }
+        ]
+      },
+      {
+        "topic": "FirebaseLogin",
+        "questions": [
+          {
+            "question": "Hvilket Firebase-bibliotek bruges til autentificering i React Native?",
+            "options": [
+              "@firebase/auth",
+              "firebase/auth",
+              "@react-native-firebase/auth",
+              "react-native-firebase-login"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvordan lyttere man efter ændringer i brugerens login-status med Firebase?",
+            "options": [
+              "firebase.auth().getUser()",
+              "firebase.auth().onAuthStateChanged()",
+              "firebase.auth().addAuthListener()",
+              "firebase.auth().subscribeToUser()"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvilken metode bruges til at logge ud en bruger med Firebase Authentication?",
+            "options": [
+              "auth().signOut()",
+              "auth().logout()",
+              "auth().endSession()",
+              "auth().removeUser()"
+            ],
+            "correctAnswer": 0
+          }
+        ]
+      },
+      {
+        "topic": "Firebase Firestore CRUD",
+        "questions": [
+          {
+            "question": "Hvilken metode bruges til at oprette et nyt dokument med automatisk genereret ID i Firestore?",
+            "options": [
+              "firestore().collection('users').set(data)",
+              "firestore().collection('users').create(data)",
+              "firestore().collection('users').add(data)",
+              "firestore().collection('users').new(data)"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvordan opdaterer man et specifikt dokument i Firestore?",
+            "options": [
+              "firestore().collection('users').doc(id).update(data)",
+              "firestore().collection('users').doc(id).modify(data)",
+              "firestore().collection('users').doc(id).edit(data)",
+              "firestore().collection('users').doc(id).change(data)"
+            ],
+            "correctAnswer": 0
+          },
+          {
+            "question": "Hvilken metode bruges til at lytte efter real-time opdateringer på en collection i Firestore?",
+            "options": [
+              "collection.watch()",
+              "collection.onSnapshot()",
+              "collection.subscribe()",
+              "collection.listen()"
+            ],
+            "correctAnswer": 1
+          }
+        ]
+      },
+      {
+        "topic": "Firebase Storage",
+        "questions": [
+          {
+            "question": "Hvilken metode bruges til at uploade en fil til Firebase Storage?",
+            "options": [
+              "storage().ref(path).set(file)",
+              "storage().ref(path).upload(file)",
+              "storage().ref(path).putFile(localPath)",
+              "storage().ref(path).add(file)"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvordan får man download URL'en til en fil i Firebase Storage?",
+            "options": [
+              "await storage().ref(path).getUrl()",
+              "await storage().ref(path).getDownloadURL()",
+              "await storage().ref(path).url()",
+              "await storage().ref(path).downloadPath()"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvilken sikkerhedsregel bør implementeres for at begrænse filstørrelsen i Firebase Storage?",
+            "options": [
+              "allow write: if request.resource.size < 5 * 1024 * 1024",
+              "maxSize: 5MB",
+              "limit: { fileSize: 5MB }",
+              "security: { maxFileSize: 5MB }"
+            ],
+            "correctAnswer": 0
+          }
+        ]
+      },
+      {
+        "topic": "Map",
+        "questions": [
+          {
+            "question": "Hvilket bibliotek bruges oftest til at implementere kort i React Native?",
+            "options": [
+              "react-native-maps",
+              "react-native-google-maps",
+              "expo-maps",
+              "react-native-mapview"
+            ],
+            "correctAnswer": 0
+          },
+          {
+            "question": "Hvordan tilføjer man en markør på et kort i react-native-maps?",
+            "options": [
+              "Ved at bruge komponenten <Pin>",
+              "Ved at bruge komponenten <Marker>",
+              "Ved at bruge komponenten <Annotation>",
+              "Ved at bruge komponenten <MapPoint>"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvilken tilladelse er nødvendig for at få adgang til brugerens placering på Android?",
+            "options": [
+              "LOCATION",
+              "ACCESS_FINE_LOCATION",
+              "GEOLOCATION",
+              "USER_LOCATION"
+            ],
+            "correctAnswer": 1
+          }
+        ]
+      },
+      {
+        "topic": "Deploy to Appstore/ Google Play",
+        "questions": [
+          {
+            "question": "Hvilken fil er nødvendig for at uploade en app til App Store?",
+            "options": [
+              ".apk fil",
+              ".ipa fil",
+              ".aab fil",
+              ".app fil"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvad er det nyeste filformat, der anbefales til upload på Google Play?",
+            "options": [
+              ".apk",
+              ".abb",
+              ".aab",
+              ".bundle"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvilken Expo-kommando bruges til at generere distributionsfiler?",
+            "options": [
+              "expo build",
+              "expo publish",
+              "expo eject",
+              "expo export"
+            ],
+            "correctAnswer": 0
+          }
+        ]
+      },
+      {
+        "topic": "Local File storage",
+        "questions": [
+          {
+            "question": "Hvilket bibliotek bruges oftest til at gemme filer lokalt i React Native?",
+            "options": [
+              "AsyncStorage",
+              "react-native-fs",
+              "expo-file-system",
+              "react-native-storage"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvilken metode bruges til at læse en fil fra det lokale filsystem med expo-file-system?",
+            "options": [
+              "FileSystem.getFile()",
+              "FileSystem.readFile()",
+              "FileSystem.readAsStringAsync()",
+              "FileSystem.open()"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvilket filområde på iOS er beskyttet mod at blive slettet under app-opdateringer?",
+            "options": [
+              "FileSystem.cacheDirectory",
+              "FileSystem.documentDirectory",
+              "FileSystem.temporaryDirectory",
+              "FileSystem.bundleDirectory"
+            ],
+            "correctAnswer": 1
+          }
+        ]
+      },
+      {
+        "topic": "Gestures",
+        "questions": [
+          {
+            "question": "Hvilket bibliotek bruges oftest til avanceret gesturhåndtering i React Native?",
+            "options": [
+              "react-native-gesture",
+              "react-native-gesture-handler",
+              "react-native-touch",
+              "react-native-interactions"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvilken gestus bruges til at zoome ind på et billede?",
+            "options": [
+              "Pan",
+              "Tap",
+              "Pinch",
+              "Swipe"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvordan implementeres en simpel swipe-gestus med react-native-gesture-handler?",
+            "options": [
+              "Med komponenten <Swipeable>",
+              "Med komponenten <Draggable>",
+              "Med komponenten <PanGestureHandler>",
+              "Med komponenten <SwipeGesture>"
+            ],
+            "correctAnswer": 2
+          }
+        ]
+      },
+      {
+        "topic": "Animation",
+        "questions": [
+          {
+            "question": "Hvilket modul i React Native bruges til grundlæggende animationer?",
+            "options": [
+              "Animation",
+              "Animated",
+              "Motion",
+              "Transition"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvilken Animated metode bruges til at ændre en værdi over tid?",
+            "options": [
+              "Animated.sequence()",
+              "Animated.spring()",
+              "Animated.timing()",
+              "Animated.loop()"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvilket tredjepartsbibliotek giver mere avancerede animationer end React Native's indbyggede Animated?",
+            "options": [
+              "react-native-animations",
+              "animated-motion",
+              "react-motion",
+              "react-native-reanimated"
+            ],
+            "correctAnswer": 3
+          }
+        ]
+      },
+      {
+        "topic": "Expo",
+        "questions": [
+          {
+            "question": "Hvad er Expo i forhold til React Native?",
+            "options": [
+              "Et alternativ til React Native",
+              "En IDE til React Native udvikling",
+              "Et framework og værktøjssæt bygget oven på React Native",
+              "En kompilator for React Native kode"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvad er en begrænsning ved at bruge Expo (managed workflow)?",
+            "options": [
+              "Det kan ikke bruge kameraet",
+              "Det understøtter ikke Firebase",
+              "Der er begrænset mulighed for at tilføje native moduler",
+              "Det kan ikke publiceres til App Store"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvilken kommando bruges til at starte en ny Expo-app?",
+            "options": [
+              "expo init",
+              "npx create-expo-app",
+              "expo create",
+              "npm init expo"
+            ],
+            "correctAnswer": 1
+          }
+        ]
+      },
+      {
+        "topic": "npm",
+        "questions": [
+          {
+            "question": "Hvad står npm for?",
+            "options": [
+              "Node Project Manager",
+              "Node Package Manager",
+              "Native Program Manager",
+              "New Project Module"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Hvilken kommando installerer en pakke og tilføjer den til package.json dependencies?",
+            "options": [
+              "npm add package-name",
+              "npm get package-name",
+              "npm install package-name",
+              "npm include package-name"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "question": "Hvilken fil indeholder information om projektets afhængigheder?",
+            "options": [
+              "npm.json",
+              "dependencies.json",
+              "package.json",
+              "project.json"
+            ],
+            "correctAnswer": 2
+          }
+        ]
+      }
+    ]
+  }
+  
