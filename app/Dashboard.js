@@ -1,90 +1,55 @@
-// Dashboard.js
+// app/Dashboard.js
 import React from "react";
 import { View, Text, FlatList, StyleSheet, Pressable } from "react-native";
-// Assuming your JSON file is saved as questions.json in the same directory
-// import questionsData from './questions.json';
 
-// Definer quiz-data som et array af objekter
-const quizData = [
-  {
-    topic: "React Component",
-    questions: [
-      {
-        question:
-          "Hvad er den korrekte syntaks for at definere en funktionel React komponent?",
-        options: [
-          "function MinKomponent() { return <View></View>; }",
-          "class MinKomponent { render() { return <View></View>; } }",
-          "const MinKomponent = function() => { return <View></View>; }",
-          "MinKomponent = () => <View></View>",
-        ],
-        correctAnswer: 0,
-      },
-      {
-        question:
-          "Hvilken af følgende er IKKE en gyldig React Native core komponent?",
-        options: ["Text", "View", "Div", "Image"],
-        correctAnswer: 2,
-      },
-      {
-        question: "Hvad er den korrekte livscyklus for en React komponent?",
-        options: [
-          "Rendering → Opdatering → Mounting → Unmounting",
-          "Mounting → Rendering → Opdatering → Unmounting",
-          "Mounting → Opdatering → Unmounting",
-          "Mounting → Rendering → Unmounting",
-        ],
-        correctAnswer: 2,
-      },
-    ],
-  },
-  {
-    topic: "Custom Component",
-    questions: [
-      {
-        question: "Hvordan importeres en custom komponent fra en anden fil?",
-        options: [
-          "import { MinKomponent } from './MinKomponent';",
-          "require('./MinKomponent');",
-          "import MinKomponent from './MinKomponent';",
-          "import('./MinKomponent.js');",
-        ],
-        correctAnswer: 2,
-      },
-      {
-        question:
-          "Hvad er den bedste praksis for at navngive custom komponenter i React Native?",
-        options: [
-          "minKomponent",
-          "MinKomponent",
-          "min_komponent",
-          "min-komponent",
-        ],
-        correctAnswer: 1,
-      },
-      {
-        question:
-          "Hvordan kan en custom komponent genbruges flere steder i en applikation?",
-        options: [
-          "Ved at kopiere koden hver gang komponenten skal bruges",
-          "Ved at definere komponenten i App.js",
-          "Ved at eksportere komponenten og importere den hvor den skal bruges",
-          "Ved at bruge global state til at gemme komponenten",
-        ],
-        correctAnswer: 2,
-      },
-    ],
-  },
-];
+// 1. Import the JSON file from the root directory
+//    '..' goes up one level from 'app' to the root.
+import rawQuizData from '../questions.json';
 
+// 2. Process the imported data to add unique IDs to each question
+//    This is important for React's list keys and state management.
+const processedTopics = rawQuizData.questions.map((topic) => ({
+    ...topic, // Keep existing topic properties (like 'topic' name)
+    questions: topic.questions.map((question, index) => ({
+        ...question, // Keep existing question properties
+        // Create a unique ID. Using topic name + index is a simple strategy.
+        // Replace spaces in topic name for a cleaner ID.
+        id: `${topic.topic.replace(/\s+/g, '_')}-${index}`
+    }))
+}));
+
+
+// Dashboard Component receives 'navigation' prop from Stack.Navigator
 export default function Dashboard({ navigation }) {
-  // The topics are stored under the "questions" key in the JSON
-  const topics = quizData;
+
+  // 3. Use the processed data (which now includes IDs)
+  //    Access the array which is the value of the "questions" key in your JSON.
+  const topics = processedTopics; // Use the processed data with IDs
+
+  // Check if data loaded correctly (optional but good practice)
+  if (!topics || !Array.isArray(topics)) {
+      console.error("Failed to load or process topics from questions.json");
+      // Render an error message or fallback UI
+      return (
+          <View style={styles.container}>
+              <Text style={styles.errorText}>Error loading quiz data.</Text>
+          </View>
+      );
+  }
 
   // Render each topic as a button
   const renderTopic = ({ item }) => (
     <Pressable
-      onPress={() => console.log("Navigating tool to be inserted here")}
+      style={styles.topicButton}
+      onPress={() => {
+        console.log(`Navigating to Questions for topic: ${item.topic}`);
+        // Navigate to the 'Questions' screen
+        // Pass the array of questions (which now include IDs) and the topic name
+        navigation.navigate('Questions', {
+          topicQuestions: item.questions, // These questions now have IDs
+          topicName: item.topic,
+        });
+      }}
     >
       <Text style={styles.topicText}>{item.topic}</Text>
     </Pressable>
@@ -92,9 +57,9 @@ export default function Dashboard({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Choose a Topic</Text>
       <FlatList
         data={topics}
+        // Use topic name as key, assuming they are unique
         keyExtractor={(item) => item.topic}
         renderItem={renderTopic}
       />
@@ -102,22 +67,37 @@ export default function Dashboard({ navigation }) {
   );
 }
 
+// --- Styles (keep the existing styles) ---
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 16,
-  },
-  header: {
-    fontSize: 24,
-    marginBottom: 16,
+    paddingHorizontal: 16,
+    paddingTop: 8,
   },
   topicButton: {
-    padding: 12,
-    backgroundColor: "#eee",
+    paddingVertical: 15,
+    paddingHorizontal: 10,
+    backgroundColor: "#e0e0e0",
     marginVertical: 8,
-    borderRadius: 4,
+    borderRadius: 8,
+    alignItems: 'center',
+    shadowColor: "#000",
+    shadowOffset: {
+        width: 0,
+        height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+    elevation: 3,
   },
   topicText: {
     fontSize: 18,
+    fontWeight: '500',
   },
+  errorText: { // Style for error message
+    color: 'red',
+    fontSize: 18,
+    textAlign: 'center',
+    marginTop: 20,
+  }
 });
