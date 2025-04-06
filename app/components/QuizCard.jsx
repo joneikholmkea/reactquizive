@@ -1,7 +1,6 @@
-// app/components/QuizCard.jsx
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Button } from 'react-native';
-// import SlideToReveal from './SlideToReveal'; // Keep if you want to use it
+// import SlideToReveal from './SlideToReveal'; // Couldn't get this to work - thursday assignment :-)
 
 // This component receives the question data and a callback function
 export default function QuizCard({ questionData, onAnswerSelect }) {

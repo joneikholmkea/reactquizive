@@ -1,4 +1,3 @@
-// app/Dashboard.js
 import React from "react";
 import { View, Text, FlatList, StyleSheet, Pressable } from "react-native";
 
@@ -94,7 +93,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '500',
   },
-  errorText: { // Style for error message
+  errorText: { 
     color: 'red',
     fontSize: 18,
     textAlign: 'center',
