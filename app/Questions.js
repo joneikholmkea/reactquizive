@@ -48,7 +48,6 @@ export default function Questions({ route, navigation }) {
       setCurrentQuestionIndex(prevIndex => prevIndex + 1);
     } else {
       setQuizFinished(true);
-      console.log(`Quiz Finished! Final Score (at state update): ${score}/${questionList.length}`); // Keep console log for debugging if desired
     }
   };
 
